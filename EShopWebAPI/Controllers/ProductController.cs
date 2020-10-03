@@ -31,7 +31,7 @@ namespace EShopWebAPI.Controllers
             try
             {
                 Product product = FindProduct(id);
-                return product != null ? Request.CreateResponse(HttpStatusCode.Found, product) : Request.CreateResponse(HttpStatusCode.NotFound);
+                return product != null ? Request.CreateResponse(HttpStatusCode.OK, product) : Request.CreateResponse(HttpStatusCode.NotFound);
             }
             catch (Exception ex)
             {
@@ -40,14 +40,14 @@ namespace EShopWebAPI.Controllers
         }
 
         // POST: api/Product
-        public HttpResponseMessage Post([FromBody] Product product)
+        public HttpResponseMessage AddProduct([FromBody] Product product)
         {
             try
             {
                 eShop = new EShopEntities();
                 eShop.Products.Add(product);
                 eShop.SaveChanges();
-                return Request.CreateResponse(HttpStatusCode.Created, eShop.Products);
+                return Request.CreateResponse(HttpStatusCode.OK, eShop.Products);
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace EShopWebAPI.Controllers
                     product.UnitPrice = pro.UnitPrice;
                     product.Quantity = pro.Quantity;
                     eShop.SaveChanges();
-                    return Request.CreateResponse(HttpStatusCode.Accepted, eShop.Products);
+                    return Request.CreateResponse(HttpStatusCode.OK, eShop.Products);
                 }
                 else
                     return Request.CreateResponse(HttpStatusCode.NotFound);
