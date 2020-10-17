@@ -8,8 +8,8 @@ namespace EShopWebAPI.Controllers
 {
     public class ProductController : ApiController
     {
-
         private EShopEntities eShop;
+
         // GET: api/Product
         public HttpResponseMessage Get()
         {
@@ -27,7 +27,6 @@ namespace EShopWebAPI.Controllers
         // GET: api/Product/5
         public HttpResponseMessage Get(int id)
         {
-
             try
             {
                 Product product = FindProduct(id);
@@ -62,7 +61,7 @@ namespace EShopWebAPI.Controllers
             {
                 eShop = new EShopEntities();
                 Product product = FindProduct(id);
-                if(product != null)
+                if (product != null)
                 {
                     product.ProductName = pro.ProductName;
                     product.UnitPrice = pro.UnitPrice;
@@ -100,6 +99,7 @@ namespace EShopWebAPI.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+
         private Product FindProduct(int productID)
         {
             try

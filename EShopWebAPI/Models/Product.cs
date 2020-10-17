@@ -9,6 +9,7 @@
 
 namespace EShopWebAPI.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -25,9 +26,11 @@ namespace EShopWebAPI.Models
         public string ProductName { get; set; }
         public int UnitPrice { get; set; }
         public int Quantity { get; set; }
-    
+        [JsonIgnore]
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore]
+
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
