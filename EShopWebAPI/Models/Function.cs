@@ -12,21 +12,19 @@ namespace EShopWebAPI.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Function
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public Function()
         {
-            this.OrderDetails = new HashSet<OrderDetail>();
+            this.Permissions = new HashSet<Permission>();
         }
     
-        public int OrderID { get; set; }
-        public Nullable<int> CustomerID { get; set; }
-        public Nullable<System.DateTime> OrderDate { get; set; }
-        public string ShipAddress { get; set; }
+        public int FunctionID { get; set; }
+        public string FunctionName { get; set; }
+        public string Description { get; set; }
     
-        public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<Permission> Permissions { get; set; }
     }
 }

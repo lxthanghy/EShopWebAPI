@@ -23,8 +23,7 @@ namespace EShopWebAPI.Models
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
         public string Description { get; set; }
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Xml.Serialization.XmlIgnore]
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }
     }

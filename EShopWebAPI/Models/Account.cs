@@ -12,14 +12,14 @@ namespace EShopWebAPI.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderDetail
+    public partial class Account
     {
-        public int OrderID { get; set; }
-        public int ProductID { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<int> Discount { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Fullname { get; set; }
+        public string Email { get; set; }
+        public Nullable<int> RoleID { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual Product Product { get; set; }
+        public virtual Role Role { get; set; }
     }
 }

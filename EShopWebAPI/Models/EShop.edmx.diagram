@@ -14,6 +14,13 @@
         <AssociationConnector Association="EShopModel.fk_OrderCustomer" />
         <AssociationConnector Association="EShopModel.fk_Order_Details" />
         <AssociationConnector Association="EShopModel.fk_Order_Product" />
+        <EntityTypeShape EntityType="EShopModel.Account" Width="1.5" PointX="7.625" PointY="11.125" />
+        <EntityTypeShape EntityType="EShopModel.Function" Width="1.5" PointX="5.375" PointY="11.625" />
+        <EntityTypeShape EntityType="EShopModel.Permission" Width="1.5" PointX="7.625" PointY="7.5" />
+        <EntityTypeShape EntityType="EShopModel.Role" Width="1.5" PointX="5.375" PointY="8.5" />
+        <AssociationConnector Association="EShopModel.FK_Accounts_Roles" />
+        <AssociationConnector Association="EShopModel.FK_Permissions_Functions" />
+        <AssociationConnector Association="EShopModel.FK_Permissions_Roles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

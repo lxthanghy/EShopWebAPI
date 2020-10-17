@@ -25,12 +25,9 @@ namespace EShopWebAPI.Models
         public string ProductName { get; set; }
         public int UnitPrice { get; set; }
         public int Quantity { get; set; }
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Xml.Serialization.XmlIgnore]
+    
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [Newtonsoft.Json.JsonIgnore]
-        [System.Xml.Serialization.XmlIgnore]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

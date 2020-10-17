@@ -169,17 +169,23 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BasicAuthenticationAttribute.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserValidate.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DTO\CategoryDTO.cs" />
     <Compile Include="DTO\OrderDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs">
+      <DependentUpon>EShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
       <DependentUpon>EShop.tt</DependentUpon>
@@ -202,13 +208,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EShop.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Function.cs">
+      <DependentUpon>EShop.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Order.cs">
       <DependentUpon>EShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>EShop.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Permission.cs">
+      <DependentUpon>EShop.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Product.cs">
+      <DependentUpon>EShop.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
       <DependentUpon>EShop.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
